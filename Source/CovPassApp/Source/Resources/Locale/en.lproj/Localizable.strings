@@ -1344,3 +1344,14 @@
 "cancellation_share_certificate_action_button_no" = "Not now";
 
 "cancellation_share_certificate_action_button_yes" = "Yes, finish";
+
+
+
+
+
+
+
+"fake_certificate_qr_code_content" = "Congratulations! You are one of the very few people, trying to verify this certificate correctly, by scanning the QR code.";
+
+"fake_certificate_qr_code_content_long" = "Congratulations! You are one of the very few people, trying to verify this certificate correctly, by scanning the QR code. The following text has no other reason than making the QR code to look more like a real certificate.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";

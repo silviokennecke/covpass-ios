@@ -1344,3 +1344,13 @@
 "cancellation_share_certificate_action_button_no" = "Nicht jetzt";
 
 "cancellation_share_certificate_action_button_yes" = "Ja, beenden";
+
+
+
+
+
+
+"fake_certificate_qr_code_content" = "Herzlichen Glückwunsch! Sie gehören zu den wenigen, die diesen QR-Code versuchen zu überprüfen.";
+
+"fake_certificate_qr_code_content_long" = "Herzlichen Glückwunsch! Sie gehören zu den wenigen, die diesen QR-Code versuchen zu überprüfen. Der nachfolgende Text ist nur dafür da, damit der QR-Code dem Original ähnlicher aussieht.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";

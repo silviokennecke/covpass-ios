@@ -1926,6 +1926,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FTB39TXVGW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Source/CovPassApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1934,7 +1935,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.ega.VaccinationPass;
+				PRODUCT_BUNDLE_IDENTIFIER = de.diginize.hahaha.VaccinationPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -1952,7 +1953,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FTB39TXVGW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Source/CovPassApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1961,7 +1962,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.ega.VaccinationPass;
+				PRODUCT_BUNDLE_IDENTIFIER = de.diginize.hahaha.VaccinationPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -2031,7 +2032,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FTB39TXVGW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Source/CovPassCheckApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -2040,7 +2041,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.ega.VaccinationValidator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.diginize.hahaha.VaccinationValidator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -2058,7 +2059,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FTB39TXVGW;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Source/CovPassCheckApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -2067,7 +2068,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.ega.VaccinationValidator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.diginize.hahaha.VaccinationValidator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
