@@ -12,6 +12,10 @@
   </p>
 </p>
 
+<p style="color: #ff0000">
+  Dies ist eine modifizierte Version, welche die Pässe modifiziert darstellt. Der Fehler kann neben genauem Vergleichen mit den Details der Pässe nur durch Scannen des QR-Codes festgestellt werden. Wann werden Betriebe endlich dazu verpflichtet, bei digitalen Impfpässen, diese auch zu überprüfen - also richtig zu überprüfen?! Ein "ist ja die CovPass-App und da steht alles ist gut" reicht nicht aus! Alles um den QR-Code herum ist kein tatsächlicher Nachweis der der Impfung, sondern nur eine Darstellung der im QR-Code befindlichen Daten! Nur der QR-Code ist der tatsächliche Nachweis!
+</p>
+
 ## Requirements
 
 - iOS 12.0 or later
