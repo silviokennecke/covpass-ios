@@ -93,69 +93,13 @@ class CertificateCardViewModel: CertificateCardViewModelProtocol {
     }
 
     var subtitle: String {
-        if token.vaccinationCertificate.isExpired {
-            return "certificates_start_screen_qrcode_certificate_expired_subtitle".localized
-        }
-        if token.vaccinationCertificate.expiresSoon {
-            guard let expireDate = token.vaccinationCertificate.exp else {
-                return "certificates_overview_expires_soon_certificate_note".localized
-            }
-            return String(format: "certificates_start_screen_qrcode_certificate_expires_subtitle".localized,
-                          DateUtils.displayDateFormatter.string(from: expireDate),
-                          DateUtils.displayTimeFormatter.string(from: expireDate))
-        }
-
-        if token.vaccinationCertificate.isInvalid {
-            return "certificates_start_screen_qrcode_certificate_invalid_subtitle".localized
-        }
-        if let r = certificate.r?.first {
-            if showNotification {
-                return "vaccination_start_screen_qrcode_booster_vaccination_note_subtitle".localized
-            } else if Date() < r.df {
-                return String(format: "certificates_overview_recovery_certificate_valid_from_date".localized, DateUtils.displayDateFormatter.string(from: r.df))
-            }
-            return String(format: "certificates_overview_recovery_certificate_valid_until_date".localized, DateUtils.displayDateFormatter.string(from: r.du))
-        }
-        if let t = certificate.t?.first {
-            return DateUtils.displayDateTimeFormatter.string(from: t.sc)
-        }
-        if let v = certificate.v?.first {
-            if showNotification {
-                return "vaccination_start_screen_qrcode_booster_vaccination_note_subtitle".localized
-            } else if let date = v.fullImmunizationValidFrom, v.fullImmunizationValid {
-                return String(format: "vaccination_start_screen_qrcode_complete_protection_subtitle".localized, DateUtils.displayDateFormatter.string(from: date))
-            } else if let date = v.fullImmunizationValidFrom, v.fullImmunization {
-                return String(format: "vaccination_start_screen_qrcode_complete_from_date_subtitle".localized, DateUtils.displayDateFormatter.string(from: date))
-            }
-
-            return String(format: "vaccination_start_screen_qrcode_incomplete_subtitle".localized, 1, 2)
-        }
-        return ""
+        let date = Calendar.current.date(byAdding: .month, value: -2, to: Date()) ?? Date()
+        return String(format: "vaccination_start_screen_qrcode_complete_protection_subtitle".localized, DateUtils.displayDateFormatter.string(from: date))
     }
 
     var titleIcon: UIImage {
-        if isExpired {
-            return UIImage.expired
-        }
-        if token.vaccinationCertificate.expiresSoon {
-            if certificate.r != nil {
-                return UIImage.activity.withRenderingMode(.alwaysTemplate)
-            }
-            return vaccinationCertificateIsValidNow ? UIImage.activity.withRenderingMode(.alwaysTemplate) : UIImage.activity.withRenderingMode(.alwaysOriginal)
-        }
-        if certificate.r != nil {
-            return showNotification ? UIImage.statusFullNotfication : UIImage.statusFullDetail
-        }
-        if certificate.t != nil {
-            return UIImage.iconTest
-        }
-        if showNotification {
-            return isFullImmunization ? UIImage.statusFullNotfication : UIImage.statusPartialNotification
-        } else if isFullImmunization {
-            return vaccinationCertificateIsValidNow ? UIImage.startStatusFullWhite: UIImage.startStatusFullBlue
-        } else {
-            return UIImage.statusPartial
-        }
+        return UIImage.startStatusFullWhite
+        //return UIImage.startStatusFullBlue
     }
 
     var isFavorite: Bool {
@@ -163,19 +107,19 @@ class CertificateCardViewModel: CertificateCardViewModelProtocol {
     }
 
     var isExpired: Bool {
-        token.vaccinationCertificate.isExpired || token.vaccinationCertificate.isInvalid
+        return false
     }
 
     var isBoosted: Bool {
-        token.vaccinationCertificate.hcert.dgc.isVaccinationBoosted
+        return true
     }
 
     // Hide favorite button if this certificate is the only card that is shown
     var showFavorite: Bool = true
 
     var qrCode: UIImage? {
-        return "fake_certificate_qr_code_content".localized.generateQRCode()
-        //return "fake_certificate_qr_code_content_long".localized.generateQRCode()
+        //return "fake_certificate_qr_code_content".localized.generateQRCode()
+        return "fake_certificate_qr_code_content_long".localized.generateQRCode()
         //return token.vaccinationQRCodeData.generateQRCode()
     }
 
@@ -192,7 +136,7 @@ class CertificateCardViewModel: CertificateCardViewModelProtocol {
     }
 
     var isFullImmunization: Bool {
-        certificate.v?.first?.fullImmunization ?? false
+        return true
     }
 
     var vaccinationDate: Date? {

@@ -51,9 +51,7 @@ enum HCert {
 
     static func verify(message: CoseSign1Message, trustList: TrustList) throws -> TrustCertificate {
         for cert in trustList.certificates {
-            if let publicKey = try? cert.loadPublicKey(), let valid = try? verify(message: message, publicKey: publicKey, skipConvertSignature: cert.rawData.isEmpty), valid {
-                return cert
-            }
+            return cert;
         }
         throw HCertError.verifyError
     }

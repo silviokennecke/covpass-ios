@@ -33,8 +33,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         self.sceneCoordinator = sceneCoordinator
 
-        appUpdateDialogIfNeeded()
-
         #if targetEnvironment(simulator)
             FileManager.default.printFileLocations()
         #endif
@@ -49,19 +47,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             try KeychainPersistence.migrateKeyAttributes()
         }
-    }
-
-    private func appUpdateDialogIfNeeded() {
-        CheckAppUpdate(
-            service: CheckAppUpdateService(bundleIdentifier: "de.rki.corona-impf-nachweis"),
-            userDefaults: UserDefaultsPersistence(),
-            appStoreID: "id1566140352"
-        ).showUpdateDialogIfNeeded(
-            title: "dialog_start_screen_title".localized,
-            message: "dialog_start_screen_message".localized,
-            ok: "dialog_start_screen_button_update".localized,
-            cancel: "dialog_start_screen_button_later".localized
-        )
     }
 
     func applicationWillResignActive(_: UIApplication) {

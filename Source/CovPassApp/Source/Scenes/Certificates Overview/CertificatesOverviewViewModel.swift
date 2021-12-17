@@ -144,22 +144,6 @@ class CertificatesOverviewViewModel: CertificatesOverviewViewModelProtocol {
         router.showAppInformation()
     }
 
-    /// Show notifications like announcements and booster notifications one after another
-    func showNotificationsIfNeeded() {
-        firstly {
-            showAnnouncementIfNeeded()
-        }
-        .then {
-            self.showScanPleaseHint()
-        }
-        .then {
-            self.showBoosterNotificationIfNeeded()
-        }
-        .catch { error in
-            print(error.localizedDescription)
-        }
-    }
-
     private func payloadFromScannerResult(_ result: ScanResult) throws -> String {
         switch result {
         case let .success(payload):
@@ -264,19 +248,6 @@ extension CertificatesOverviewViewModel {
 }
 
 // MARK: Show Scan Please Hint
-
-private extension CertificatesOverviewViewModel {
-    func showScanPleaseHint() -> Promise<Void> {
-        guard !UserDefaults.StartupInfo.bool(.scanPleaseShown) else {
-            return .value
-        }
-        UserDefaults.StartupInfo.set(true, forKey: .scanPleaseShown)
-		#if DEBUG
-        UserDefaults.StartupInfo.set(false, forKey: .scanPleaseShown)
-        #endif
-        return router.showScanPleaseHint()
-    }
-}
 
 // MARK: - Booster Notifications
 

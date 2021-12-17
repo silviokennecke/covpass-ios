@@ -11,7 +11,7 @@ import UIKit
 
 public extension String {
     func generateQRCode() -> UIImage? {
-        let data = self.data(using: String.Encoding.ascii)
+        let data = self.data(using: String.Encoding.ascii) ?? Data(self.utf8)
         guard let qrFilter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
         qrFilter.setValue(data, forKey: "inputMessage")
         guard let qrImage = qrFilter.outputImage else { return nil }

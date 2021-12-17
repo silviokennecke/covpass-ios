@@ -54,7 +54,6 @@ class CertificatesOverviewViewController: UIViewController {
         setupCollectionView()
         setupDotIndicator()
         viewModel.refresh()
-        viewModel.showNotificationsIfNeeded()
     }
 
     override func viewWillAppear(_ animated: Bool) {
